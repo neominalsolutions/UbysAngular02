@@ -9,9 +9,10 @@ import { RolesPageComponent } from './pages/roles-page/roles-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TableModule } from 'primeng/table';
 import { UserGridComponent } from './pages/users-page/features/user-grid/user-grid.component';
+import { UserDetailPageComponent } from './pages/user-detail-page/user-detail-page.component';
 
 @NgModule({
-  declarations: [AdminLayoutComponent, UsersPageComponent, RolesPageComponent, UserGridComponent],
+  declarations: [AdminLayoutComponent, UsersPageComponent, RolesPageComponent, UserGridComponent, UserDetailPageComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

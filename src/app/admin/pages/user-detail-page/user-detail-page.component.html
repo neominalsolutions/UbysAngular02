@@ -1,0 +1,36 @@
+<div *ngFor="let perm of ar.snapshot.data['permissions']">
+  <div [ngSwitch]="perm">
+    <div *ngSwitchCase="'createUser'">
+      <button>Create User</button>
+    </div>
+    <div *ngSwitchCase="'updateUser'">
+      <button>Update User</button>
+    </div>
+
+    <div *ngSwitchCase="'downloadReport'">
+      <button>Download Report</button>
+    </div>
+    <div *ngSwitchCase="'deleteUser'">
+      <button>Delete User</button>
+    </div>
+
+
+  </div>
+
+  <div>
+    <!-- diplay none -->
+    <!-- angular ngStyle inline style uygulamamızı sağlar -->
+    <!-- ngClass koşul bazlı class verme işlemleri için kullanılır. -->
+    <button [ngClass]="perm == 'createUser' ? 'active':'passive'">Aktif Pasif Button</button>
+  </div>
+
+  <div [hidden]="false">
+    <!-- diplay none -->
+    <!-- angular ngStyle inline style uygulamamızı sağlar -->
+    <button [ngStyle]="{'color':'red','padding':'5px'}">Delete User</button>
+  </div>
+
+</div>
+
+<!-- ngClass,ngStyle,ngModel,[hidden] gibi directiveler attribute directives model binding styling -->
+<!-- *ngIf, *ngSwitch, *ngFor structural yapısal directivler. dom remove append -->

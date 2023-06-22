@@ -30,8 +30,10 @@
     </ng-template>
     <ng-template pTemplate="body" let-user>
       <tr>
-        <td>{{ user.name }}</td>
-        <td>{{ user.username }}</td>
+        <td><a [routerLink]="[user.id, user.name]">{{ user.name }}</a></td>
+        <!-- /admin/users?id=1&name=ali -->
+        <td><a [routerLink]="['/admin/users-detail']" [queryParams]="{id: user.id, name:user.name}">{{ user.name }}</a>
+        </td>
         <td>{{ user.email }}</td>
         <td>{{ user.company.name }}</td>
       </tr>
